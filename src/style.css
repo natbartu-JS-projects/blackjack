@@ -1,5 +1,52 @@
+:root {
+  --mainColor: #e64040;
+  --secondaryColor: #5671a3;
+  --thirdColor: #000000;
+}
+
+
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: aquamarine;
+  border: solid 1px var(--mainColor);
+  background-color: var(--secondaryColor);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 100vw;
+} 
+.title {
+  font-family: 'Lucida Sans' sans-serif;
+  color: whitesmoke;
+  margin-top: 20px;
+  text-shadow: 4px 2px var(--thirdColor);
+  font-size: 40px;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  
+}
+
+#card1 {
+  border: solid 3px var(--thirdColor);
+  width: 100px;
+  height: 200px;
+  border-radius: 5px; 
+  margin: 40px;
+}
+
+#card2 {
+  border: solid 3px var(--thirdColor);
+  width: 100px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 40px;
 }

@@ -1,3 +1,6 @@
+let cardOne = document.getElementById("card1");
+let cardTwo = document.getElementById("card2");
+
 let firstCard = 10;
 let secondCard = 11;
 let sum = firstCard + secondCard;
