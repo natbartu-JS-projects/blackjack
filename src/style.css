@@ -4,6 +4,10 @@
   --thirdColor: #000000;
 }
 
+@font-face {
+  font-family: fontMessage;
+  src: url(/fonts/WINTERFRIEND.ttf);
+}
 
 * {
   margin: 0;
@@ -27,26 +31,38 @@ body {
   font-size: 40px;
 }
 
-.main-container {
+.cards-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
   margin: 20px;
   
 }
 
-#card1 {
+#card1, #card2 {
   border: solid 3px var(--thirdColor);
   width: 100px;
   height: 200px;
   border-radius: 5px; 
   margin: 40px;
 }
+.play-message {
+  font-family: 'Lucida Sans' sans-serif;
+  color: whitesmoke;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  font-family: fontMessage;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 
-#card2 {
+/* #card2 {
   border: solid 3px var(--thirdColor);
   width: 100px;
   height: 200px;
   border-radius: 5px;
   margin: 40px;
-}
+} */
