@@ -12,6 +12,10 @@ let isAlive = true;
 let message = " ";
 
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
   } else if (sum === 21) {
@@ -27,4 +31,10 @@ function startGame() {
 
   sumEl.textContent = sum;
   gameOverMessage.textContent = message;
+}
+
+function newCard() {
+  let card = 6;
+  sum += card;
+  renderGame();
 }

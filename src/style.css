@@ -82,14 +82,14 @@ body {
 .button-container{
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-btn {
   background-color: var(--thirdColor);
   color: var(--fourthColor);
-  width: 100px;
+  width: 50%;
   padding: 10px 15px;
   border-radius: 30px;
   margin-top: 20px;
