@@ -46,7 +46,8 @@ body {
   border-radius: 5px; 
   margin: 40px;
 }
-.play-message {
+
+.message-el, .game-over-message {
   font-family: 'Lucida Sans' sans-serif;
   color: whitesmoke;
   margin-top: 20px;
@@ -67,6 +68,17 @@ body {
   border-radius: 5px;
   margin: 40px;
 } */
+.sum-el {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .button-container{
   display: flex;
   flex-direction: column;
