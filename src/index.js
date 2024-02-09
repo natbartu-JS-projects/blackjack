@@ -24,6 +24,7 @@ function startGame() {
 
   cardOne.textContent = firstCard;
   cardTwo.textContent = secondCard;
-  gameOverMessage.textContent = message;
+
   sumEl.textContent = sum;
+  gameOverMessage.textContent = message;
 }
