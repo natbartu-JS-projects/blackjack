@@ -39,13 +39,13 @@ body {
   
 }
 
-#card1, #card2 {
+/* #card-el {
   border: solid 3px var(--thirdColor);
   width: 100px;
   height: 200px;
   border-radius: 5px; 
   margin: 40px;
-}
+} */
 
 .message-el, .game-over-message {
   font-family: 'Lucida Sans' sans-serif;
