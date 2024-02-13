@@ -9,6 +9,7 @@ let sumEl = document.querySelector("#sum-el");
 let cardEl = document.getElementById("card-el");
 let gameOverMessage = document.getElementById("game-over-message");
 let newCardEl = document.getElementById("newCard");
+let newGameEl = document.getElementById("newGame");
 
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
@@ -22,19 +23,30 @@ function getRandomCard() {
   }
 }
 
-function hiddenBtnEl() {
+function disableNewCard() {
   let hideNewCardBtn = newCardEl;
   hideNewCardBtn.style.visibility = "hidden";
 }
-hiddenBtnEl();
+disableNewCard();
 
-function showBtnEl() {
+function showNewCard() {
+  disableStartGameBtn();
   let showBtn = newCardEl;
   showBtn.style.visibility = "visible";
 }
 
+function disableStartGameBtn() {
+  let hideStartGameBtn = newGameEl;
+  hideStartGameBtn.style.visibility = "hidden";
+}
+
+function showStartGameBtn() {
+  let showStartGameBtn = newGameEl;
+  showStartGameBtn.style.visibility = "visible";
+}
+
 function startGame() {
-  showBtnEl();
+  showNewCard();
   isAlive = true;
   let firstCard = getRandomCard();
   let secondCard = getRandomCard();
@@ -56,10 +68,13 @@ function renderGame() {
   } else if (sum === 21) {
     message = "Wohoo! You've got BlackJack!";
     hasBlackJack = true;
+    showStartGameBtn();
+    disableNewCard();
   } else {
     message = "You're out of the game!";
     isAlive = false;
-    hiddenBtnEl();
+    disableNewCard();
+    showStartGameBtn();
   }
 
   sumEl.textContent = sum;
