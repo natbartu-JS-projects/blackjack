@@ -2,11 +2,13 @@ let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
+let hiddenButton = false;
 let message = " ";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardEl = document.getElementById("card-el");
 let gameOverMessage = document.getElementById("game-over-message");
+let newCardEl = document.getElementById("newCard");
 
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
@@ -20,7 +22,19 @@ function getRandomCard() {
   }
 }
 
+function hiddenBtnEl() {
+  let hideNewCardBtn = newCardEl;
+  hideNewCardBtn.style.visibility = "hidden";
+}
+hiddenBtnEl();
+
+function showBtnEl() {
+  let showBtn = newCardEl;
+  showBtn.style.visibility = "visible";
+}
+
 function startGame() {
+  showBtnEl();
   isAlive = true;
   let firstCard = getRandomCard();
   let secondCard = getRandomCard();
@@ -45,6 +59,7 @@ function renderGame() {
   } else {
     message = "You're out of the game!";
     isAlive = false;
+    hiddenBtnEl();
   }
 
   sumEl.textContent = sum;
@@ -56,6 +71,7 @@ function newCard() {
     let card = getRandomCard();
     sum += card;
     cards.push(card);
+
     renderGame();
   }
 }

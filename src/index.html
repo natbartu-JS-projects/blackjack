@@ -12,8 +12,12 @@
 
       <p class="message-el">Want to play a round?</p>
       <div class="button-container">
-        <button class="game-btn" onclick="startGame()">Start Game</button>
-        <button class="game-btn" onclick="newCard()">New Card</button>
+        <button class="game-btn" id="newGame" onclick="startGame()">
+          Start Game
+        </button>
+        <button class="game-btn" id="newCard" onclick="newCard()">
+          New Card
+        </button>
       </div>
 
       <!-- <div class="cards-container"> -->
@@ -21,7 +25,6 @@
       <!-- </div> -->
       <div class="sum-el" id="sum-el"></div>
       <p class="message-el" id="game-over-message"></p>
-      <p id="player-el" class="player-el"></p>
     </div>
     <script src="index.js"></script>
   </body>
