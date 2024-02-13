@@ -100,7 +100,3 @@ body {
 .game-btn:hover {
  background-color: var(--mainColor);
 }
-
-.player-el {
-  color: var(--fourthColor);
-}
